@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA3D97BA29AD7C8F009F4DD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */; };
+		CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */; };
+		CA3D97BF29AD927F009F4DD2 /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */; };
 		CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */; };
 		CA56843D29A5B9E200B819C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843C29A5B9E200B819C2 /* Assets.xcassets */; };
 		CA56844029A5B9E200B819C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843F29A5B9E200B819C2 /* Preview Assets.xcassets */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		CA56843529A5B9E000B819C2 /* UberSwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		CA56843C29A5B9E200B819C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +64,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA3D97B629AD7C5E009F4DD2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D97B829AD7C6B009F4DD2 /* Views */,
+				CA3D97B729AD7C68009F4DD2 /* ViewModels */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CA3D97B729AD7C68009F4DD2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CA3D97B829AD7C6B009F4DD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */,
+				CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA3D97BD29AD9264009F4DD2 /* ReusableItems */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */,
+			);
+			path = ReusableItems;
+			sourceTree = "<group>";
+		};
 		CA56842C29A5B9E000B819C2 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +116,7 @@
 		CA56843729A5B9E000B819C2 /* UberSwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
+				CA3D97BD29AD9264009F4DD2 /* ReusableItems */,
 				CA56844E29A5BCA300B819C2 /* App */,
 				CA56844D29A5BCA200B819C2 /* Core */,
 				CA56844C29A5BCA000B819C2 /* Extensions */,
@@ -126,6 +166,7 @@
 		CA56844D29A5BCA200B819C2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CA3D97B629AD7C5E009F4DD2 /* Authentication */,
 				CA619E6329AA22EF002EEF40 /* Trips */,
 				CA619E5429A8401B002EEF40 /* LocationSearch */,
 				CA619E5329A83695002EEF40 /* Home */,
@@ -277,6 +318,7 @@
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
 				CA619E6529AA22FF002EEF40 /* RideRequestView.swift in Sources */,
 				CA5FA85829AD06500007FC45 /* Double.swift in Sources */,
+				CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */,
 				CA619E6229AA0458002EEF40 /* MapViewState.swift in Sources */,
 				CA619E5A29A85FEE002EEF40 /* MapViewActionButton.swift in Sources */,
 				CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */,
@@ -286,6 +328,8 @@
 				CA5FA85A29AD17640007FC45 /* UberLocation.swift in Sources */,
 				CA619E5829A84062002EEF40 /* LocationSearchActivationView.swift in Sources */,
 				CA619E5E29A882F2002EEF40 /* LocationSearchResultCell.swift in Sources */,
+				CA3D97BA29AD7C8F009F4DD2 /* LoginView.swift in Sources */,
+				CA3D97BF29AD927F009F4DD2 /* CustomInputField.swift in Sources */,
 				CA5FA85629AC5F4E0007FC45 /* RideType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
