@@ -49,7 +49,7 @@ struct HomeView: View {
                 .onReceive(LocationManager.shared.$userLocation) { location in
                     if let location = location {
                         locationViewModel.userLocation = location //change here>
-                        print("DEBUG: User location in home view is \(location)")
+                        
                     }
             }
             }
