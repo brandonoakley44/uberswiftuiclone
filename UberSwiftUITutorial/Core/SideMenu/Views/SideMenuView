@@ -1,0 +1,22 @@
+//
+//  SideViewNav.swift
+//  UberSwiftUITutorial
+//
+//  Created by Brandon Oakley on 2023-03-03.
+//
+
+import SwiftUI
+
+struct SideMenuView: View {
+    var body: some View {
+        Text("Hello, World!")
+    }
+}
+
+struct SideMenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        SideViewNav()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
+    }
+}
+

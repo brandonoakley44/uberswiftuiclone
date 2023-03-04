@@ -34,6 +34,9 @@
 		CA619E6529AA22FF002EEF40 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA619E6429AA22FF002EEF40 /* RideRequestView.swift */; };
 		CAD72E7529B1916B00EDFE28 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7429B1916B00EDFE28 /* User.swift */; };
 		CAD72E7729B1A39800EDFE28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAD72E7629B1A39800EDFE28 /* GoogleService-Info.plist */; };
+		CAD72E7E29B1AEEA00EDFE28 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */; };
+		CAD72E8029B1B6F900EDFE28 /* SideMenuOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7F29B1B6F900EDFE28 /* SideMenuOptionViewModel.swift */; };
+		CAD72E8229B1BAB600EDFE28 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E8129B1BAB600EDFE28 /* SideMenuOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		CA619E6429AA22FF002EEF40 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		CAD72E7429B1916B00EDFE28 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAD72E7629B1A39800EDFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		CAD72E7F29B1B6F900EDFE28 /* SideMenuOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionViewModel.swift; sourceTree = "<group>"; };
+		CAD72E8129B1BAB600EDFE28 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,16 +146,8 @@
 				CA56844B29A5BC9F00B819C2 /* Managers */,
 				CA56844A29A5BC9D00B819C2 /* Models */,
 				CA56843C29A5B9E200B819C2 /* Assets.xcassets */,
-				CA56843E29A5B9E200B819C2 /* Preview Content */,
 			);
 			path = UberSwiftUITutorial;
-			sourceTree = "<group>";
-		};
-		CA56843E29A5B9E200B819C2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		CA56844A29A5BC9D00B819C2 /* Models */ = {
@@ -183,6 +181,7 @@
 		CA56844D29A5BCA200B819C2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CAD72E7829B1AD6700EDFE28 /* SideMenu */,
 				CA3D97B629AD7C5E009F4DD2 /* Authentication */,
 				CA619E6329AA22EF002EEF40 /* Trips */,
 				CA619E5429A8401B002EEF40 /* LocationSearch */,
@@ -258,6 +257,32 @@
 				CA619E6429AA22FF002EEF40 /* RideRequestView.swift */,
 			);
 			path = Trips;
+			sourceTree = "<group>";
+		};
+		CAD72E7829B1AD6700EDFE28 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CAD72E7A29B1AD7400EDFE28 /* ViewModel */,
+				CAD72E7929B1AD7000EDFE28 /* Views */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		CAD72E7929B1AD7000EDFE28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */,
+				CAD72E8129B1BAB600EDFE28 /* SideMenuOptionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAD72E7A29B1AD7400EDFE28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAD72E7F29B1B6F900EDFE28 /* SideMenuOptionViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +368,7 @@
 				CA619E6029A959BC002EEF40 /* LocationSearchViewModel.swift in Sources */,
 				CA619E5C29A865D2002EEF40 /* LocationSearchView.swift in Sources */,
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
+				CAD72E8029B1B6F900EDFE28 /* SideMenuOptionViewModel.swift in Sources */,
 				CA619E6529AA22FF002EEF40 /* RideRequestView.swift in Sources */,
 				CA5FA85829AD06500007FC45 /* Double.swift in Sources */,
 				CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */,
@@ -352,9 +378,11 @@
 				CA619E5A29A85FEE002EEF40 /* MapViewActionButton.swift in Sources */,
 				CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */,
 				CA5FA85C29AD218E0007FC45 /* Color.swift in Sources */,
+				CAD72E8229B1BAB600EDFE28 /* SideMenuOptionView.swift in Sources */,
 				CA56845429A5BE9300B819C2 /* UberMapViewRepresentable.swift in Sources */,
 				CA56845229A5BE2800B819C2 /* HomeView.swift in Sources */,
 				CA5FA85A29AD17640007FC45 /* UberLocation.swift in Sources */,
+				CAD72E7E29B1AEEA00EDFE28 /* SideMenuView.swift in Sources */,
 				CA619E5829A84062002EEF40 /* LocationSearchActivationView.swift in Sources */,
 				CA619E5E29A882F2002EEF40 /* LocationSearchResultCell.swift in Sources */,
 				CA3D97BA29AD7C8F009F4DD2 /* LoginView.swift in Sources */,
@@ -487,7 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"UberSwiftUITutorial/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = N7EK62AVQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -518,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"UberSwiftUITutorial/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = N7EK62AVQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

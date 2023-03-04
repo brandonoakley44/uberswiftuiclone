@@ -14,7 +14,7 @@ struct LocationSearchActivationView: View {
                 .fill(Color.black)
                 .frame(width:8, height: 8)
                 .padding(.horizontal)
-            Text("Where to?")
+            Text("Where ya to?")
                 .foregroundColor(Color(.darkGray))
             
             Spacer()
