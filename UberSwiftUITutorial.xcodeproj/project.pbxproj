@@ -37,6 +37,9 @@
 		CAD72E7E29B1AEEA00EDFE28 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */; };
 		CAD72E8029B1B6F900EDFE28 /* SideMenuOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7F29B1B6F900EDFE28 /* SideMenuOptionViewModel.swift */; };
 		CAD72E8229B1BAB600EDFE28 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E8129B1BAB600EDFE28 /* SideMenuOptionView.swift */; };
+		CAD72E8529B31A8D00EDFE28 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E8429B31A8D00EDFE28 /* SettingsView.swift */; };
+		CAD72E8929B3228700EDFE28 /* SavedLocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E8829B3228700EDFE28 /* SavedLocationRowView.swift */; };
+		CAD72E8B29B324B600EDFE28 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E8A29B324B600EDFE28 /* SettingsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		CAD72E7F29B1B6F900EDFE28 /* SideMenuOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionViewModel.swift; sourceTree = "<group>"; };
 		CAD72E8129B1BAB600EDFE28 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		CAD72E8429B31A8D00EDFE28 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CAD72E8829B3228700EDFE28 /* SavedLocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationRowView.swift; sourceTree = "<group>"; };
+		CAD72E8A29B324B600EDFE28 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */,
+				CAD72E8829B3228700EDFE28 /* SavedLocationRowView.swift */,
+				CAD72E8A29B324B600EDFE28 /* SettingsRowView.swift */,
 			);
 			path = ReusableItems;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 		CA56844D29A5BCA200B819C2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CAD72E8329B31A7900EDFE28 /* Settings */,
 				CAD72E7829B1AD6700EDFE28 /* SideMenu */,
 				CA3D97B629AD7C5E009F4DD2 /* Authentication */,
 				CA619E6329AA22EF002EEF40 /* Trips */,
@@ -285,6 +294,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CAD72E8329B31A7900EDFE28 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CAD72E8729B31AA700EDFE28 /* Views */,
+				CAD72E8629B31AA400EDFE28 /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CAD72E8629B31AA400EDFE28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CAD72E8729B31AA700EDFE28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAD72E8429B31A8D00EDFE28 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA619E6029A959BC002EEF40 /* LocationSearchViewModel.swift in Sources */,
+				CAD72E8929B3228700EDFE28 /* SavedLocationRowView.swift in Sources */,
 				CA619E5C29A865D2002EEF40 /* LocationSearchView.swift in Sources */,
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
 				CAD72E8029B1B6F900EDFE28 /* SideMenuOptionViewModel.swift in Sources */,
@@ -374,6 +408,8 @@
 				CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */,
 				CA3D97CC29AEF2D3009F4DD2 /* AuthViewModel.swift in Sources */,
 				CA619E6229AA0458002EEF40 /* MapViewState.swift in Sources */,
+				CAD72E8B29B324B600EDFE28 /* SettingsRowView.swift in Sources */,
+				CAD72E8529B31A8D00EDFE28 /* SettingsView.swift in Sources */,
 				CAD72E7529B1916B00EDFE28 /* User.swift in Sources */,
 				CA619E5A29A85FEE002EEF40 /* MapViewActionButton.swift in Sources */,
 				CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */,
