@@ -51,8 +51,12 @@ struct SettingsView: View {
                 // if i wanted to
                 //(Can build an enum!)
                 Section("Favorites") {
-                  SavedLocationRowView(imageName: "house.circle.fill", title: "Home", subtitle: "Add Home")
-                    SavedLocationRowView(imageName: "archivebox.circle.fill", title: "Work", subtitle: "Add Work")
+                    ForEach(SavedLocationViewModel.allCases) { viewModel in
+                        NavigationLink {
+                            SavedLocationSearchView()                        } label: {
+                            SavedLocationRowView(viewModel: viewModel)
+                        }
+                    }
                 }
                 
                 Section("Settings") {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1A1E0729B3B98C005B80D2 /* SavedLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E0629B3B98C005B80D2 /* SavedLocationViewModel.swift */; };
+		CA1A1E0929B4236C005B80D2 /* SavedLocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E0829B4236C005B80D2 /* SavedLocationSearchView.swift */; };
+		CA1A1E0B29B45045005B80D2 /* LocationSearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E0A29B45045005B80D2 /* LocationSearchResultsView.swift */; };
 		CA3D97BA29AD7C8F009F4DD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */; };
 		CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */; };
 		CA3D97BF29AD927F009F4DD2 /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1A1E0629B3B98C005B80D2 /* SavedLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationViewModel.swift; sourceTree = "<group>"; };
+		CA1A1E0829B4236C005B80D2 /* SavedLocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationSearchView.swift; sourceTree = "<group>"; };
+		CA1A1E0A29B45045005B80D2 /* LocationSearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsView.swift; sourceTree = "<group>"; };
 		CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 				CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */,
 				CAD72E8829B3228700EDFE28 /* SavedLocationRowView.swift */,
 				CAD72E8A29B324B600EDFE28 /* SettingsRowView.swift */,
+				CA1A1E0A29B45045005B80D2 /* LocationSearchResultsView.swift */,
 			);
 			path = ReusableItems;
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 				CA619E5729A84062002EEF40 /* LocationSearchActivationView.swift */,
 				CA619E5D29A882F2002EEF40 /* LocationSearchResultCell.swift */,
 				CA619E5B29A865D1002EEF40 /* LocationSearchView.swift */,
+				CA1A1E0829B4236C005B80D2 /* SavedLocationSearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 		CAD72E8629B31AA400EDFE28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA1A1E0629B3B98C005B80D2 /* SavedLocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA619E6029A959BC002EEF40 /* LocationSearchViewModel.swift in Sources */,
+				CA1A1E0929B4236C005B80D2 /* SavedLocationSearchView.swift in Sources */,
 				CAD72E8929B3228700EDFE28 /* SavedLocationRowView.swift in Sources */,
 				CA619E5C29A865D2002EEF40 /* LocationSearchView.swift in Sources */,
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
@@ -407,6 +417,8 @@
 				CA5FA85829AD06500007FC45 /* Double.swift in Sources */,
 				CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */,
 				CA3D97CC29AEF2D3009F4DD2 /* AuthViewModel.swift in Sources */,
+				CA1A1E0B29B45045005B80D2 /* LocationSearchResultsView.swift in Sources */,
+				CA1A1E0729B3B98C005B80D2 /* SavedLocationViewModel.swift in Sources */,
 				CA619E6229AA0458002EEF40 /* MapViewState.swift in Sources */,
 				CAD72E8B29B324B600EDFE28 /* SettingsRowView.swift in Sources */,
 				CAD72E8529B31A8D00EDFE28 /* SettingsView.swift in Sources */,

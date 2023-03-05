@@ -11,9 +11,10 @@ struct LocationSearchView: View {
     
     @State private var startLocationText = ""
     //@Binding var showLocationSearchView: Bool
-    @Binding var mapState: MapViewState
+   // @Binding var mapState: MapViewState //map state no longer tied to locationsearchview so I can remove it
     //@StateObject var viewModel = LocationSearchViewModel()
     @EnvironmentObject var viewModel: LocationSearchViewModel
+    
     
     
     
@@ -53,19 +54,7 @@ struct LocationSearchView: View {
             
             
             //List View
-            ScrollView {
-                VStack(alignment: .leading) {
-                    ForEach(viewModel.results, id:\.self) { result in
-                        LocationSearchResultCell(title: result.title, subtitle: result.subtitle)
-                            .onTapGesture {
-                                withAnimation(.spring()) {
-                                    viewModel.selectLocation(result)
-                                    mapState = .locationSelected
-                                }
-                            }
-                    }
-                }
-            }
+            LocationSearchResultsView(viewModel: viewModel, config: .ride) // I know its ride because I am in LocationSearchView
         }
         .background(Color.theme.backgroundColor)
         .background(.white)
@@ -75,8 +64,9 @@ struct LocationSearchView: View {
 struct LocationSearchView_Previews: PreviewProvider {
     static var previews: some View {
         //  LocationSearchView(mapState: .constant(.searchingForLocation))
-       LocationSearchView(mapState: .constant(.searchingForLocation))
+       LocationSearchView()
             .environmentObject(LocationSearchViewModel())
             .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
     }
 }
+
