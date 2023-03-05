@@ -11,6 +11,6 @@ struct User: Codable {
     let fullName: String
     let email: String
     let uid: String
-    var home: SavedLocation?
+    var homeLocation: SavedLocation?
     var workLocation: SavedLocation?    //optional because user may or may not have these locations saved
 }

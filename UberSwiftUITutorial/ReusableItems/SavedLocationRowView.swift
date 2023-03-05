@@ -13,6 +13,7 @@ struct SavedLocationRowView: View {
 //    let title: String
 //    let subtitle: String // swapping these out with view model instead
     let viewModel: SavedLocationViewModel
+    let user: User 
 //
     var body: some View {
         HStack(spacing: 12) {   // spacing to sepearate stuff in this hStack
@@ -27,7 +28,7 @@ struct SavedLocationRowView: View {
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(Color.theme.primaryTextColor)
                 
-                Text(viewModel.subtitle)
+                Text(viewModel.subtitle(forUser: user))
                     .font(.system(size:14))
                     .foregroundColor(.gray)
             }
@@ -35,10 +36,10 @@ struct SavedLocationRowView: View {
     }
 }
 
-struct SavedLocationRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        // switched to using a view model instead for settings
-//        SavedLocationRowView(imageName: "house.circle.fill", title: "Home", subtitle: "Add Home")
-        SavedLocationRowView(viewModel: .home)
-    }
-}
+//struct SavedLocationRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        // switched to using a view model instead for settings
+////        SavedLocationRowView(imageName: "house.circle.fill", title: "Home", subtitle: "Add Home")
+//        SavedLocationRowView(viewModel: .home)
+//    }
+//}
