@@ -75,6 +75,7 @@ class AuthViewModel: ObservableObject {
             guard let user = try? snapshot.data(as: User.self) else { return }
             
             self.currentUser = user
+            print("DEBUG: CURRENT USER IS \(user)")     //14 min mark error eppars
         }
     }
     

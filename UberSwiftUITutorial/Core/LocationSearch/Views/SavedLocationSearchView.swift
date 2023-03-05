@@ -14,6 +14,9 @@ struct SavedLocationSearchView: View {
     // not using environment object here (hell explain why in a bit
     @StateObject var viewModel = LocationSearchViewModel()
     
+    //Need to know if I am saving as a home location or work location:
+    let config: SavedLocationViewModel
+    
     var body: some View {
         VStack {
             HStack(spacing: 16) {
@@ -32,16 +35,16 @@ struct SavedLocationSearchView: View {
             .padding(.top)
             Spacer()
             
-            LocationSearchResultsView(viewModel: viewModel, config: .saveLocation)
+            LocationSearchResultsView(viewModel: viewModel, config: .saveLocation(config))
         }
-        .navigationTitle("Add Home")
+        .navigationTitle(config.subtitle)
     }
 }
 
 struct SavedLocationSearchView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            SavedLocationSearchView()
+            SavedLocationSearchView(config: .home)
                 .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
         }
     }
