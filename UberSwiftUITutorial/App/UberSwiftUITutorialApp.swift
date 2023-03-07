@@ -21,12 +21,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct UberSwiftUITutorialApp: App {
     @StateObject var locationViewModel = LocationSearchViewModel()
     @StateObject var authViewModel = AuthViewModel()
+    @StateObject var homeViewModel = HomeViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate // for firebase
     var body: some Scene {
         WindowGroup {
             HomeView()
                 .environmentObject(locationViewModel)
                 .environmentObject(authViewModel)
+                .environmentObject(homeViewModel)
         }
     }
 }

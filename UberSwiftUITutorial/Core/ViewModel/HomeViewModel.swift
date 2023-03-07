@@ -12,6 +12,8 @@ import FirebaseFirestoreSwift
 
 class HomeViewModel: ObservableObject {
     
+    @Published var drivers = [User]()
+    
     init() {
         fetchDrivers()
     }
@@ -22,9 +24,15 @@ class HomeViewModel: ObservableObject {
             .getDocuments { snapshot, _ in
                 guard let documents = snapshot?.documents else {return }
                 
-                let drivers = documents.map({ try?  $0.data(as: User.self) })
+                let drivers = documents.compactMap({ try?  $0.data(as: User.self) }) // handles non-optional
+                self.drivers = drivers //   make it set to the publishable var above so the UberMapView Representable can see them
                 
-                print("DEBUG: DRIVERS \(drivers)")
+                
+                // cool long form (not too important) ... $0 is a shorthand for snapshot in each part of the code
+//                let users = documents.compactMap { doc in
+//                    let user = try? doc.data(as: User.self)
+//                    return user
+//                }
             }
     }
 }

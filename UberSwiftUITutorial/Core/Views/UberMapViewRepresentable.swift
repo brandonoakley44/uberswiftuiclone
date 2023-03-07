@@ -17,6 +17,7 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     let locationManager = LocationManager.shared
     @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    @EnvironmentObject var homeViewModel: HomeViewModel
     
     func makeUIView(context: Context) -> some UIView {
         mapView.delegate = context.coordinator
@@ -33,6 +34,9 @@ struct UberMapViewRepresentable: UIViewRepresentable {
         switch mapState {
         case .noInput:
             context.coordinator.clearMapViewAndCenterOnUserLocation()
+            print("DEBUG: Drivers in map view \(homeViewModel.drivers)") // show drivers on map whhen map is just showing
+            // Adding drivers to the map:
+            context.coordinator.addDriversToMap(homeViewModel.drivers)
             break
         case .searchingForLocation:
             break
@@ -138,6 +142,23 @@ extension UberMapViewRepresentable {
                 parent.mapView.setRegion(currentRegion, animated: true)
             }
         }
+        
+        
+        func addDriversToMap(_ drivers: [User]) {
+            for driver in drivers {
+                
+                // have to convert  driver coordinate geopoint  into actual coordinate object so mapview can render that annotation on map
+                let coordinate = CLLocationCoordinate2D(latitude: driver.coordinates.latitude, longitude: driver.coordinates.longitude)
+                
+                
+                let anno = MKPointAnnotation()
+                anno.coordinate = coordinate
+                self.parent.mapView.addAnnotation(anno) // dont necessarily need to say self unless im in a block like a handler
+             //   self.parent.mapView.selectAnnotation(anno, animated: true)
+            }
+        }
+        
+        
         
     }
 }
