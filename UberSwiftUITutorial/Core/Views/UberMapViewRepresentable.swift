@@ -107,6 +107,17 @@ extension UberMapViewRepresentable {
             return polyline
         }
         
+        //need this because I am using a custom annotation (for the drivers)
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            if let annotation = annotation as? DriverAnnotation {
+                let view = MKAnnotationView(annotation: annotation, reuseIdentifier: "driver")
+                view.image = UIImage(systemName: "car.fill")
+                    
+                return view
+            }
+            return nil
+        }
+        
         //MARK - Helpers
         
         func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D) {
@@ -145,20 +156,11 @@ extension UberMapViewRepresentable {
         
         
         func addDriversToMap(_ drivers: [User]) {
-            for driver in drivers {
-                
-                // have to convert  driver coordinate geopoint  into actual coordinate object so mapview can render that annotation on map
-                let coordinate = CLLocationCoordinate2D(latitude: driver.coordinates.latitude, longitude: driver.coordinates.longitude)
-                
-                
-                let anno = MKPointAnnotation()
-                anno.coordinate = coordinate
-                self.parent.mapView.addAnnotation(anno) // dont necessarily need to say self unless im in a block like a handler
-             //   self.parent.mapView.selectAnnotation(anno, animated: true)
-            }
+            let annotations = drivers.map({ DriverAnnotation(driver: $0) }) // commented code below does the same thing
+//            for driver in drivers {
+//                let driverAnno = DriverAnnotation(driver: driver)
+//            }
+            self.parent.mapView.addAnnotations(annotations)
         }
-        
-        
-        
     }
 }
