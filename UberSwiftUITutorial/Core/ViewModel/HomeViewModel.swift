@@ -9,10 +9,15 @@ import Foundation
 import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
+import Combine
 
 class HomeViewModel: ObservableObject {
     
     @Published var drivers = [User]()
+    
+    private let service = UserService.shared
+    var currentUser: User?
+    private var cancellables = Set<AnyCancellable>()        //combine has to be able to store the value somewhere
     
     
     init() {
@@ -32,11 +37,15 @@ class HomeViewModel: ObservableObject {
     
     
     func fetchUser() {
-        UserService.fetchUser { user in
-            guard user.accountType == .passenger else { return }
-            self.fetchDrivers()
-        }
-        
+        service.$user
+            .sink { user in
+                guard let user = user else {return }
+                self.currentUser = user
+                guard user.accountType == .passenger else { return }
+                self.fetchDrivers()
+            }
+            .store(in: &cancellables)
+            
     }
     
 }
