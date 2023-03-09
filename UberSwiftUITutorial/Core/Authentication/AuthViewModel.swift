@@ -79,15 +79,8 @@ class AuthViewModel: ObservableObject {
     }
     
     func fetchUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }    //can alsuo user user session at top
-        //
-        Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
-            guard let snapshot = snapshot else { return }
-            
-            guard let user = try? snapshot.data(as: User.self) else { return }
-            
+        UserService.fetchUser { user in
             self.currentUser = user
-            print("DEBUG: CURRENT USER IS \(user)")     //14 min mark error eppars
         }
     }
     

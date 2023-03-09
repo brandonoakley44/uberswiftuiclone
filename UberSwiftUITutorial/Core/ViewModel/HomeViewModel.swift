@@ -14,8 +14,9 @@ class HomeViewModel: ObservableObject {
     
     @Published var drivers = [User]()
     
+    
     init() {
-        fetchDrivers()
+        fetchUser()
     }
     
     func fetchDrivers() {
@@ -25,14 +26,17 @@ class HomeViewModel: ObservableObject {
                 guard let documents = snapshot?.documents else {return }
                 
                 let drivers = documents.compactMap({ try?  $0.data(as: User.self) }) // handles non-optional
-                self.drivers = drivers //   make it set to the publishable var above so the UberMapView Representable can see them
-                
-                
-                // cool long form (not too important) ... $0 is a shorthand for snapshot in each part of the code
-//                let users = documents.compactMap { doc in
-//                    let user = try? doc.data(as: User.self)
-//                    return user
-//                }
+               self.drivers = drivers //   make it set to the publishable var above so the UberMapView Representable can see them
             }
     }
+    
+    
+    func fetchUser() {
+        UserService.fetchUser { user in
+            guard user.accountType == .passenger else { return }
+            self.fetchDrivers()
+        }
+        
+    }
+    
 }

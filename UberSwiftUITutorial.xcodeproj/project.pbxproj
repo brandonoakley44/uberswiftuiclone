@@ -14,6 +14,7 @@
 		CA1A1E0F29B56C50005B80D2 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E0E29B56C50005B80D2 /* DeveloperPreview.swift */; };
 		CA1A1E1129B6F9D0005B80D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E1029B6F9D0005B80D2 /* HomeViewModel.swift */; };
 		CA1A1E1529B831CC005B80D2 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E1429B831CC005B80D2 /* DriverAnnotation.swift */; };
+		CA1A1E1829B8B880005B80D2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A1E1729B8B880005B80D2 /* UserService.swift */; };
 		CA3D97BA29AD7C8F009F4DD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */; };
 		CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */; };
 		CA3D97BF29AD927F009F4DD2 /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */; };
@@ -57,6 +58,7 @@
 		CA1A1E0E29B56C50005B80D2 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		CA1A1E1029B6F9D0005B80D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA1A1E1429B831CC005B80D2 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		CA1A1E1729B8B880005B80D2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CA3D97B929AD7C8F009F4DD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1A1E1629B8B854005B80D2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CA1A1E1729B8B880005B80D2 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CA3D97B629AD7C5E009F4DD2 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +172,7 @@
 		CA56843729A5B9E000B819C2 /* UberSwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
+				CA1A1E1629B8B854005B80D2 /* Services */,
 				CA3D97BD29AD9264009F4DD2 /* ReusableItems */,
 				CA56844E29A5BCA300B819C2 /* App */,
 				CA56844D29A5BCA200B819C2 /* Core */,
@@ -425,6 +436,7 @@
 				CA1A1E1129B6F9D0005B80D2 /* HomeViewModel.swift in Sources */,
 				CA619E5C29A865D2002EEF40 /* LocationSearchView.swift in Sources */,
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
+				CA1A1E1829B8B880005B80D2 /* UserService.swift in Sources */,
 				CAD72E8029B1B6F900EDFE28 /* SideMenuOptionViewModel.swift in Sources */,
 				CA619E6529AA22FF002EEF40 /* RideRequestView.swift in Sources */,
 				CA1A1E0F29B56C50005B80D2 /* DeveloperPreview.swift in Sources */,
