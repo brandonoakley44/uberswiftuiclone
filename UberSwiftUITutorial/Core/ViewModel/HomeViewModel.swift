@@ -21,6 +21,7 @@ class HomeViewModel: NSObject, ObservableObject {
     private let service = UserService.shared
     //var currentUser: User?
     private var cancellables = Set<AnyCancellable>()        //combine has to be able to store the value somewhere
+    private var currentUser: User?
     
     //Location Search Properties
     @Published var results = [MKLocalSearchCompletion]()    // Initialize as blank array of results
@@ -65,6 +66,7 @@ class HomeViewModel: NSObject, ObservableObject {
     func fetchUser() {
         service.$user
             .sink { user in
+                self.currentUser = user
                 guard let user = user else {return }
               //  self.currentUser = user
                 guard user.accountType == .passenger else { return }
@@ -76,9 +78,68 @@ class HomeViewModel: NSObject, ObservableObject {
     
 }
 
-//MARK - Location Search Helpers
+//MARK: - Passenger API
+extension HomeViewModel {
+    func requestTrip() {
+        guard let driver = drivers.first else { return }
+        guard let currentUser = currentUser else { return  }
+        guard let dropoffLocation = selectedUberLocation else { return }
+        let dropoffGeoPoint = GeoPoint(latitude: dropoffLocation.coordinate.latitude, longitude: dropoffLocation.coordinate.longitude)
+        let userLocation = CLLocation(latitude: currentUser.coordinates.latitude, longitude: currentUser.coordinates.longitude)
+       
+        
+        getPlacemark(forLocation: userLocation) { placemark, error in
+            guard let placemark = placemark else { return }
+    
+            let trip = Trip(
+                id: NSUUID().uuidString,
+                passengerUid: currentUser.uid,
+                driverUid: driver.uid,
+                passengerName: currentUser.fullName,
+                driverName: driver.fullName,
+                passengerLocation: currentUser.coordinates,
+                driverLocation: driver.coordinates,
+                pickupLocationName: placemark.name ?? "Current Location",
+                dropoffLocationName: dropoffLocation.title,
+                pickupLocationAddress: "123 Main St.",
+                pickupLocation: currentUser.coordinates,
+                dropoffLocation: dropoffGeoPoint ,
+                tripCost: 50.0
+            )
+            
+            
+            guard let encodedTrip = try? Firestore.Encoder().encode(trip) else { return }
+            Firestore.firestore().collection("trips").document().setData(encodedTrip) { _ in
+                print("DEBUG: Did upload trip to firestor")
+            }
+            
+        }
+    }
+}
+
+
+//MARK: - Driver  API
+extension HomeViewModel {
+    
+}
+
+//MARK: - Location Search Helpers
+
 
 extension HomeViewModel {
+    
+    //reverse geocoding
+    func getPlacemark(forLocation location: CLLocation, completion: @escaping(CLPlacemark?, Error?) -> Void) {
+        CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
+            if let error = error {
+                completion(nil,error)
+                return
+            }
+            guard let placemark = placemarks?.first else { return }
+            completion(placemark, nil)
+        }
+    }
+    
     
     func selectLocation(_ localSearch: MKLocalSearchCompletion, config: LocationResultsViewConfig) {
         locationSearch(forLocalSearchCompletion: localSearch) { response, error in
