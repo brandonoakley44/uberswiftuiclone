@@ -12,7 +12,7 @@ struct SavedLocationSearchView: View {
     @State private var text = ""
     
     // not using environment object here (hell explain why in a bit
-    @StateObject var viewModel = LocationSearchViewModel()
+    @StateObject var viewModel = HomeViewModel()
     
     //Need to know if I am saving as a home location or work location:
     let config: SavedLocationViewModel

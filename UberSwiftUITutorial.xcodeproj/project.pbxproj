@@ -41,6 +41,7 @@
 		CA619E6229AA0458002EEF40 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA619E6129AA0458002EEF40 /* MapViewState.swift */; };
 		CA619E6529AA22FF002EEF40 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA619E6429AA22FF002EEF40 /* RideRequestView.swift */; };
 		CA92A83329BB27C000253E7A /* AcceptTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92A83229BB27C000253E7A /* AcceptTripView.swift */; };
+		CA92A83529BB493500253E7A /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92A83429BB493500253E7A /* Trip.swift */; };
 		CAD72E7529B1916B00EDFE28 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7429B1916B00EDFE28 /* User.swift */; };
 		CAD72E7729B1A39800EDFE28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAD72E7629B1A39800EDFE28 /* GoogleService-Info.plist */; };
 		CAD72E7E29B1AEEA00EDFE28 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */; };
@@ -83,6 +84,7 @@
 		CA619E6129AA0458002EEF40 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		CA619E6429AA22FF002EEF40 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		CA92A83229BB27C000253E7A /* AcceptTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTripView.swift; sourceTree = "<group>"; };
+		CA92A83429BB493500253E7A /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		CAD72E7429B1916B00EDFE28 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAD72E7629B1A39800EDFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAD72E7D29B1AEEA00EDFE28 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				CAD72E7429B1916B00EDFE28 /* User.swift */,
 				CA1A1E0C29B53478005B80D2 /* SavedLocation.swift */,
 				CA1A1E1429B831CC005B80D2 /* DriverAnnotation.swift */,
+				CA92A83429BB493500253E7A /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				CA1A1E0F29B56C50005B80D2 /* DeveloperPreview.swift in Sources */,
 				CA5FA85829AD06500007FC45 /* Double.swift in Sources */,
 				CA92A83329BB27C000253E7A /* AcceptTripView.swift in Sources */,
+				CA92A83529BB493500253E7A /* Trip.swift in Sources */,
 				CA3D97BC29AD7C9E009F4DD2 /* RegistrationView.swift in Sources */,
 				CA3D97CC29AEF2D3009F4DD2 /* AuthViewModel.swift in Sources */,
 				CA1A1E0B29B45045005B80D2 /* LocationSearchResultsView.swift in Sources */,

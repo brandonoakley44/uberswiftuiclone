@@ -13,7 +13,7 @@ struct LocationSearchView: View {
     //@Binding var showLocationSearchView: Bool
    // @Binding var mapState: MapViewState //map state no longer tied to locationsearchview so I can remove it
     //@StateObject var viewModel = LocationSearchViewModel()
-    @EnvironmentObject var viewModel: LocationSearchViewModel
+    @EnvironmentObject var viewModel: HomeViewModel
     
     
     

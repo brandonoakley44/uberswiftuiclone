@@ -12,7 +12,7 @@ struct HomeView: View {
    // @State private var showLocationSearchView = false
     @State private var mapState = MapViewState.noInput
     @State private var showSideMenu = false 
-    @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    //@EnvironmentObject var locationViewModel: LocationSearchViewModel
     @EnvironmentObject var authViewModel: AuthViewModel
     @EnvironmentObject var homeViewModel: HomeViewModel
     
@@ -72,11 +72,11 @@ extension HomeView {
         .edgesIgnoringSafeArea(.bottom)
         .onReceive(LocationManager.shared.$userLocation) { location in
             if let location = location {
-                locationViewModel.userLocation = location //change here>
+                homeViewModel.userLocation = location //change here>
                 
             }
         }
-        .onReceive(locationViewModel.$selectedUberLocation) { location in
+        .onReceive(homeViewModel.$selectedUberLocation) { location in
             if location != nil {
                 self.mapState = .locationSelected
             }
