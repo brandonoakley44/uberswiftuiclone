@@ -23,6 +23,9 @@
 		CA3D97C829ADC664009F4DD2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA3D97C729ADC664009F4DD2 /* FirebaseFirestoreSwift */; };
 		CA3D97CA29ADC664009F4DD2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA3D97C929ADC664009F4DD2 /* FirebaseStorage */; };
 		CA3D97CC29AEF2D3009F4DD2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D97CB29AEF2D3009F4DD2 /* AuthViewModel.swift */; };
+		CA41114629BCE855000B62F1 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114529BCE855000B62F1 /* SwiftProtobuf */; };
+		CA41114829BCE855000B62F1 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114729BCE855000B62F1 /* SwiftProtobufPluginLibrary */; };
+		CA41114A29BCE855000B62F1 /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114929BCE855000B62F1 /* protoc-gen-swift */; };
 		CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */; };
 		CA56843D29A5B9E200B819C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843C29A5B9E200B819C2 /* Assets.xcassets */; };
 		CA56844029A5B9E200B819C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843F29A5B9E200B819C2 /* Preview Assets.xcassets */; };
@@ -100,10 +103,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA41114829BCE855000B62F1 /* SwiftProtobufPluginLibrary in Frameworks */,
 				CA3D97C429ADC664009F4DD2 /* FirebaseAuth in Frameworks */,
 				CA3D97CA29ADC664009F4DD2 /* FirebaseStorage in Frameworks */,
 				CA3D97C629ADC664009F4DD2 /* FirebaseFirestore in Frameworks */,
+				CA41114629BCE855000B62F1 /* SwiftProtobuf in Frameworks */,
 				CA3D97C829ADC664009F4DD2 /* FirebaseFirestoreSwift in Frameworks */,
+				CA41114A29BCE855000B62F1 /* protoc-gen-swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +383,9 @@
 				CA3D97C529ADC664009F4DD2 /* FirebaseFirestore */,
 				CA3D97C729ADC664009F4DD2 /* FirebaseFirestoreSwift */,
 				CA3D97C929ADC664009F4DD2 /* FirebaseStorage */,
+				CA41114529BCE855000B62F1 /* SwiftProtobuf */,
+				CA41114729BCE855000B62F1 /* SwiftProtobufPluginLibrary */,
+				CA41114929BCE855000B62F1 /* protoc-gen-swift */,
 			);
 			productName = UberSwiftUITutorial;
 			productReference = CA56843529A5B9E000B819C2 /* UberSwiftUITutorial.app */;
@@ -408,6 +417,7 @@
 			mainGroup = CA56842C29A5B9E000B819C2;
 			packageReferences = (
 				CA3D97C229ADC664009F4DD2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CA41114429BCE855000B62F1 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			productRefGroup = CA56843629A5B9E000B819C2 /* Products */;
 			projectDirPath = "";
@@ -686,6 +696,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		CA41114429BCE855000B62F1 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -708,6 +726,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA3D97C229ADC664009F4DD2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		CA41114529BCE855000B62F1 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA41114429BCE855000B62F1 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		CA41114729BCE855000B62F1 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA41114429BCE855000B62F1 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		CA41114929BCE855000B62F1 /* protoc-gen-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA41114429BCE855000B62F1 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = "protoc-gen-swift";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

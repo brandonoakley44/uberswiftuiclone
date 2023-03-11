@@ -74,7 +74,6 @@ class AuthViewModel: ObservableObject {
     func signout() {
         do {
             try Auth.auth().signOut()
-            print("DEBUG: Did sign out with firebase")
             self.userSession = nil      // sync backend and front end
         } catch let error {
             print("DEBUG: Failed to sign out with error: \(error.localizedDescription)")

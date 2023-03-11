@@ -34,7 +34,6 @@ class HomeViewModel: NSObject, ObservableObject {
     
     var queryFragment: String = "" {
         didSet {
-            //print("DEBUG: Query fragment is \(queryFragment)")
             searchCompleter.queryFragment = queryFragment
         }
     }  // what searchCompleter uses to search for all of those locations
@@ -69,8 +68,12 @@ class HomeViewModel: NSObject, ObservableObject {
                 self.currentUser = user
                 guard let user = user else {return }
               //  self.currentUser = user
-                guard user.accountType == .passenger else { return }
-                self.fetchDrivers()
+              //  guard user.accountType == .passenger else { return }
+                if user.accountType == .passenger {
+                    self.fetchDrivers()
+                } else {
+                    self.fetchTrips()
+                }
             }
             .store(in: &cancellables)
             
@@ -110,7 +113,7 @@ extension HomeViewModel {
             
             guard let encodedTrip = try? Firestore.Encoder().encode(trip) else { return }
             Firestore.firestore().collection("trips").document().setData(encodedTrip) { _ in
-                print("DEBUG: Did upload trip to firestor")
+                print("DEBUG: Did upload trip to firestore")
             }
             
         }
@@ -120,7 +123,16 @@ extension HomeViewModel {
 
 //MARK: - Driver  API
 extension HomeViewModel {
-    
+    func fetchTrips() {
+        guard let currentUser = currentUser else { return }
+        
+        Firestore.firestore().collection("trips").whereField("driverUid", isEqualTo: currentUser.uid)
+            .getDocuments { snapshot, _ in
+                guard let documents = snapshot?.documents, let document = documents.first else { return }
+                guard let trip = try? document.data(as: Trip.self) else { return }
+                print("DEBUG: Trip request for driver is \(trip)")
+            }
+    }
 }
 
 //MARK: - Location Search Helpers

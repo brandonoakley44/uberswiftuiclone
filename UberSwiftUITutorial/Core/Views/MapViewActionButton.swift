@@ -45,7 +45,6 @@ struct MapViewActionButton: View {
         case .locationSelected, .polylineAdded:
             mapState = .noInput
             viewModel.selectedUberLocation = nil
-            print( "DEBUG Clear Map View")
         }
     }
     

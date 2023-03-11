@@ -24,7 +24,6 @@ class UserService : ObservableObject {  //publishing a user from this class
     func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
-            print("DEBUG;Did fetch user from firestore")
             guard let snapshot = snapshot else { return }
 
             guard let user = try? snapshot.data(as: User.self) else { return }

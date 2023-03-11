@@ -27,7 +27,6 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     private let searchCompleter = MKLocalSearchCompleter()
     var queryFragment: String = "" {
         didSet {
-            //print("DEBUG: Query fragment is \(queryFragment)")
             searchCompleter.queryFragment = queryFragment
         }
     }  // what searchCompleter uses to search for all of those locations
