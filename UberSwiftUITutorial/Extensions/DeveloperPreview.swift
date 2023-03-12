@@ -32,7 +32,10 @@ class DeveloperPreview {
         pickupLocationAddress: "123 Grand Lake Road",
         pickupLocation: .init(latitude: 46.130997, longitude: -60.24),
         dropoffLocation: .init(latitude: 46.139997, longitude: -60.24),
-        tripCost: 47.0)
+        tripCost: 47.0,
+        distanceToPassenger: 1000,
+        travelTimeToPassenger: 24
+        )
     
     let mockUser = User(
         fullName: "Brandon Oakley",
