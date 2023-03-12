@@ -17,6 +17,7 @@ class HomeViewModel: NSObject, ObservableObject {
     //MARK - Properties
     
     @Published var drivers = [User]()
+    @Published var trip: Trip?
     
     private let service = UserService.shared
     //var currentUser: User?
@@ -50,16 +51,7 @@ class HomeViewModel: NSObject, ObservableObject {
     
     //MARK - User API
     
-    func fetchDrivers() {
-        Firestore.firestore().collection("users")
-            .whereField("accountType", isEqualTo: AccountType.driver.rawValue)
-            .getDocuments { snapshot, _ in
-                guard let documents = snapshot?.documents else {return }
-                
-                let drivers = documents.compactMap({ try?  $0.data(as: User.self) }) // handles non-optional
-               self.drivers = drivers //   make it set to the publishable var above so the UberMapView Representable can see them
-            }
-    }
+  
     
     
     func fetchUser() {
@@ -83,6 +75,19 @@ class HomeViewModel: NSObject, ObservableObject {
 
 //MARK: - Passenger API
 extension HomeViewModel {
+    
+    func fetchDrivers() {
+        Firestore.firestore().collection("users")
+            .whereField("accountType", isEqualTo: AccountType.driver.rawValue)
+            .getDocuments { snapshot, _ in
+                guard let documents = snapshot?.documents else {return }
+                
+                let drivers = documents.compactMap({ try?  $0.data(as: User.self) }) // handles non-optional
+               self.drivers = drivers //   make it set to the publishable var above so the UberMapView Representable can see them
+            }
+    }
+    
+    
     func requestTrip() {
         guard let driver = drivers.first else { return }
         guard let currentUser = currentUser else { return  }
@@ -130,6 +135,7 @@ extension HomeViewModel {
             .getDocuments { snapshot, _ in
                 guard let documents = snapshot?.documents, let document = documents.first else { return }
                 guard let trip = try? document.data(as: Trip.self) else { return }
+                self.trip = trip
                 print("DEBUG: Trip request for driver is \(trip)")
             }
     }

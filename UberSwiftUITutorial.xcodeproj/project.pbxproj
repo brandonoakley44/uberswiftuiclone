@@ -26,6 +26,7 @@
 		CA41114629BCE855000B62F1 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114529BCE855000B62F1 /* SwiftProtobuf */; };
 		CA41114829BCE855000B62F1 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114729BCE855000B62F1 /* SwiftProtobufPluginLibrary */; };
 		CA41114A29BCE855000B62F1 /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114929BCE855000B62F1 /* protoc-gen-swift */; };
+		CA41114C29BD84F4000B62F1 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114B29BD84F4000B62F1 /* GeoPoint.swift */; };
 		CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */; };
 		CA56843D29A5B9E200B819C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843C29A5B9E200B819C2 /* Assets.xcassets */; };
 		CA56844029A5B9E200B819C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843F29A5B9E200B819C2 /* Preview Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		CA3D97BB29AD7C9E009F4DD2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		CA3D97CB29AEF2D3009F4DD2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CA41114B29BD84F4000B62F1 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
 		CA56843529A5B9E000B819C2 /* UberSwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		CA56843C29A5B9E200B819C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				CA5FA85729AD06500007FC45 /* Double.swift */,
 				CA5FA85B29AD218D0007FC45 /* Color.swift */,
 				CA1A1E0E29B56C50005B80D2 /* DeveloperPreview.swift */,
+				CA41114B29BD84F4000B62F1 /* GeoPoint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				CA1A1E1129B6F9D0005B80D2 /* HomeViewModel.swift in Sources */,
 				CA619E5C29A865D2002EEF40 /* LocationSearchView.swift in Sources */,
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
+				CA41114C29BD84F4000B62F1 /* GeoPoint.swift in Sources */,
 				CA1A1E1829B8B880005B80D2 /* UserService.swift in Sources */,
 				CAD72E8029B1B6F900EDFE28 /* SideMenuOptionViewModel.swift in Sources */,
 				CA619E6529AA22FF002EEF40 /* RideRequestView.swift in Sources */,
