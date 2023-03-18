@@ -102,7 +102,7 @@ extension HomeViewModel {
             let tripCost = self.computeRidePrice(forType: .uberX)
     
             let trip = Trip(
-                id: NSUUID().uuidString,
+                //id: NSUUID().uuidString,
                 passengerUid: currentUser.uid,
                 driverUid: driver.uid,
                 passengerName: currentUser.fullName,
@@ -116,7 +116,8 @@ extension HomeViewModel {
                 dropoffLocation: dropoffGeoPoint ,
                 tripCost: tripCost,
                 distanceToPassenger: 0,
-                travelTimeToPassenger: 0
+                travelTimeToPassenger: 0,
+                state: .requested
             )
             
             
@@ -145,10 +146,26 @@ extension HomeViewModel {
                 self.trip?.travelTimeToPassenger = Int(route.expectedTravelTime / 60)
                 self.trip?.distanceToPassenger = route.distance
                 }
-                
-                print("DEBUG: Trip request for driver is \(trip)")
             }
     }
+    
+    func rejectTrip() {
+        updateTripState( state: .rejected)
+    }
+    
+    func acceptTrip() {
+        updateTripState( state: .accepted)
+    }
+    
+    private func updateTripState( state: Trip.TripState) {
+        guard let trip = trip else { return }
+        Firestore.firestore().collection("trips").document(trip.id).updateData([
+            "state": state.rawValue
+        ]) { _ in
+            print("DEBUG: Did update trip with state \(state)")
+        }
+    }
+    
 }
 
 //MARK: - Location Search Helpers
