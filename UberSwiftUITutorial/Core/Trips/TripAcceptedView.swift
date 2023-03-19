@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TripAcceptedView: View {
+    @EnvironmentObject var viewModel: HomeViewModel
+    
+    
     var body: some View {
         VStack {
             Capsule()
@@ -15,83 +18,87 @@ struct TripAcceptedView: View {
                 .frame(width: 48, height: 6)
                 .padding(.top, 8)
             
-            // pick up info view
-            VStack {
-                HStack {
-                    Text("Meet your driver at Apple Campus for your trip to Starbucks")
-                        .font(.body)
-                        .frame(height: 44)
-                        .lineLimit(2)
-                        .padding(.trailing)
-                    
-                    Spacer()
-                    
-                    VStack {
-                        Text("10")
-                            .bold()
+            if let trip = viewModel.trip {
+                // pick up info view
+                VStack {
+                    HStack {
+                        Text("Meet your driver at \(trip.pickupLocationName) for your trip to \(trip.dropoffLocationName)")
+                            .font(.body)
+                            .frame(height: 44)
+                            .lineLimit(2)
+                            .padding(.trailing)
                         
-                        Text("min")
-                            .bold()
-                    }
-                    .frame(width: 56, height: 56)
-                    .foregroundColor(.white)
-                //    .padding()
-                    .background(Color(.systemBlue))
-                    .cornerRadius(10)
-                }
-                .padding()
-                
-                Divider()
-            }
-            
-            //driver info view
-            VStack {
-                HStack {
-                    Image("male-profile-photo")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 80, height: 80)
-                        .clipShape(Circle())
-                    
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Kevin Smith")
-                            .fontWeight(.bold)
+                        Spacer()
                         
-                        HStack {
-                            Image(systemName: "star.fill")
-                                .foregroundColor(Color(.systemYellow))
-                                .imageScale(.small)
+                        VStack {
+                            Text("\(trip.travelTimeToPassenger)")
+                                .bold()
                             
-                            Text("4.8")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
+                            Text("min")
+                                .bold()
                         }
+                        .frame(width: 56, height: 56)
+                        .foregroundColor(.white)
+                    //    .padding()
+                        .background(Color(.systemBlue))
+                        .cornerRadius(10)
                     }
-                    Spacer()
+                    .padding()
                     
-                    //driver vehicle info
-                    VStack(alignment: .center) {
-                        Image("uber-x")
+                    Divider()
+                }
+                
+                //Driver info
+                VStack {
+                    HStack {
+                        Image("male-profile-photo")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 120, height: 64)
+                            .frame(width: 80, height: 80)
+                            .clipShape(Circle())
                         
-                        HStack {
-                            Text("Mercedes S -")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(.gray)
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(trip.driverName)
+                                .fontWeight(.bold)
                             
-                            Text("GKZ 041")
-                                .font(.system(size:14, weight: .semibold))
+                            HStack {
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color(.systemYellow))
+                                    .imageScale(.small)
+                                
+                                Text("4.8")
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                            }
                         }
-                        .frame(width: 160)
-                        .padding(.bottom)
+                        Spacer()
+                        
+                        //driver vehicle info
+                        VStack(alignment: .center) {
+                            Image("uber-x")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 120, height: 64)
+                            
+                            HStack {
+                                Text("Mercedes S -")
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundColor(.gray)
+                                
+                                Text("GKZ 041")
+                                    .font(.system(size:14, weight: .semibold))
+                            }
+                            .frame(width: 160)
+                            .padding(.bottom)
+                        }
                     }
+                    
+                    Divider()
                 }
-                
-                Divider()
+                .padding()
             }
-            .padding()
+        
+ 
             
             Button {
                 print("DEBUG: Cancel trip")
