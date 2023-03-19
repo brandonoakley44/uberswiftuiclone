@@ -30,6 +30,7 @@
 		CA41114E29C6AD72000B62F1 /* TripLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */; };
 		CA41115029C6AEBF000B62F1 /* TripAcceptedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */; };
 		CA41115229C6CA8F000B62F1 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41115129C6CA8F000B62F1 /* Spinner.swift */; };
+		CA41115629C788AF000B62F1 /* PickupPassengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41115529C788AF000B62F1 /* PickupPassengerView.swift */; };
 		CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */; };
 		CA56843D29A5B9E200B819C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843C29A5B9E200B819C2 /* Assets.xcassets */; };
 		CA56844029A5B9E200B819C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843F29A5B9E200B819C2 /* Preview Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLoadingView.swift; sourceTree = "<group>"; };
 		CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAcceptedView.swift; sourceTree = "<group>"; };
 		CA41115129C6CA8F000B62F1 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		CA41115529C788AF000B62F1 /* PickupPassengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupPassengerView.swift; sourceTree = "<group>"; };
 		CA56843529A5B9E000B819C2 /* UberSwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		CA56843C29A5B9E200B819C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +170,25 @@
 				CA41115129C6CA8F000B62F1 /* Spinner.swift */,
 			);
 			path = ReusableItems;
+			sourceTree = "<group>";
+		};
+		CA41115329C7885D000B62F1 /* Passengers */ = {
+			isa = PBXGroup;
+			children = (
+				CA619E6429AA22FF002EEF40 /* RideRequestView.swift */,
+				CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */,
+				CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */,
+			);
+			path = Passengers;
+			sourceTree = "<group>";
+		};
+		CA41115429C78861000B62F1 /* Drivers */ = {
+			isa = PBXGroup;
+			children = (
+				CA92A83229BB27C000253E7A /* AcceptTripView.swift */,
+				CA41115529C788AF000B62F1 /* PickupPassengerView.swift */,
+			);
+			path = Drivers;
 			sourceTree = "<group>";
 		};
 		CA56842C29A5B9E000B819C2 = {
@@ -315,10 +336,8 @@
 		CA619E6329AA22EF002EEF40 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
-				CA619E6429AA22FF002EEF40 /* RideRequestView.swift */,
-				CA92A83229BB27C000253E7A /* AcceptTripView.swift */,
-				CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */,
-				CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */,
+				CA41115429C78861000B62F1 /* Drivers */,
+				CA41115329C7885D000B62F1 /* Passengers */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -484,6 +503,7 @@
 				CAD72E7529B1916B00EDFE28 /* User.swift in Sources */,
 				CA1A1E0D29B53478005B80D2 /* SavedLocation.swift in Sources */,
 				CA619E5A29A85FEE002EEF40 /* MapViewActionButton.swift in Sources */,
+				CA41115629C788AF000B62F1 /* PickupPassengerView.swift in Sources */,
 				CA41115029C6AEBF000B62F1 /* TripAcceptedView.swift in Sources */,
 				CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */,
 				CA5FA85C29AD218E0007FC45 /* Color.swift in Sources */,
