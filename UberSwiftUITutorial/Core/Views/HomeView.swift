@@ -65,33 +65,8 @@ extension HomeView {
             }
             
             if let user = authViewModel.currentUser {
-                if user.accountType == .passenger {
-                    if mapState == .locationSelected || mapState == .polylineAdded {
-                        RideRequestView()
-                            .transition(.move(edge: .bottom))
-                    } else if mapState == .tripRequested {
-                        //show trip loadingview
-                        TripLoadingView()
-                            .transition(.move(edge: .bottom))
-                    } else if mapState == .tripAccepted {
-                        //show trip accepted view
-                        TripAcceptedView()
-                            .transition(.move(edge: .bottom))
-                    } else if mapState == .tripRejected {
-                        //show rejection view
-                    }
-                } else {
-                    if let trip = homeViewModel.trip {
-                        
-                        if mapState == .tripRequested {
-                            AcceptTripView(trip: trip)
-                                .transition(.move(edge: .bottom))
-                        } else if mapState == .tripAccepted {
-                            PickupPassengerView(trip: trip)
-                                .transition(.move(edge: .bottom))
-                        }
-                    }
-                }
+                homeViewModel.viewForState(mapState, user: user)
+                    .transition(.move(edge: .bottom))
             }
         }
         .edgesIgnoringSafeArea(.bottom)
@@ -120,6 +95,12 @@ extension HomeView {
                 case .accepted:
                     self.mapState = .tripAccepted
                     print("DEBUG: Accepted trip")
+                case .passengerCancelled:
+                    self.mapState = .tripCancelledByPassenger
+                    print("DEBUG: Passenger cancelled")
+                case .driverCancelled:
+                    self.mapState = .tripCancelledByDriver
+                    print("DEBUG: Driver cancelled")
                 }
             }
         }

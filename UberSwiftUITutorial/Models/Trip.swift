@@ -16,6 +16,8 @@ struct Trip: Identifiable, Codable {
         case requested
         case rejected
         case accepted
+        case passengerCancelled
+        case driverCancelled
     }
     
     @DocumentID var tripId: String?
