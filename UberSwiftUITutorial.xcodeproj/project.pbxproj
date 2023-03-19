@@ -27,6 +27,8 @@
 		CA41114829BCE855000B62F1 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114729BCE855000B62F1 /* SwiftProtobufPluginLibrary */; };
 		CA41114A29BCE855000B62F1 /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = CA41114929BCE855000B62F1 /* protoc-gen-swift */; };
 		CA41114C29BD84F4000B62F1 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114B29BD84F4000B62F1 /* GeoPoint.swift */; };
+		CA41114E29C6AD72000B62F1 /* TripLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */; };
+		CA41115029C6AEBF000B62F1 /* TripAcceptedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */; };
 		CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */; };
 		CA56843D29A5B9E200B819C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843C29A5B9E200B819C2 /* Assets.xcassets */; };
 		CA56844029A5B9E200B819C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843F29A5B9E200B819C2 /* Preview Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		CA3D97BE29AD927F009F4DD2 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		CA3D97CB29AEF2D3009F4DD2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CA41114B29BD84F4000B62F1 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
+		CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLoadingView.swift; sourceTree = "<group>"; };
+		CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAcceptedView.swift; sourceTree = "<group>"; };
 		CA56843529A5B9E000B819C2 /* UberSwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		CA56843C29A5B9E200B819C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 			children = (
 				CA619E6429AA22FF002EEF40 /* RideRequestView.swift */,
 				CA92A83229BB27C000253E7A /* AcceptTripView.swift */,
+				CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */,
+				CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 				CA1A1E0929B4236C005B80D2 /* SavedLocationSearchView.swift in Sources */,
 				CAD72E8929B3228700EDFE28 /* SavedLocationRowView.swift in Sources */,
 				CA1A1E1129B6F9D0005B80D2 /* HomeViewModel.swift in Sources */,
+				CA41114E29C6AD72000B62F1 /* TripLoadingView.swift in Sources */,
 				CA619E5C29A865D2002EEF40 /* LocationSearchView.swift in Sources */,
 				CA56845629A5C70800B819C2 /* LocationManager.swift in Sources */,
 				CA41114C29BD84F4000B62F1 /* GeoPoint.swift in Sources */,
@@ -474,6 +481,7 @@
 				CAD72E7529B1916B00EDFE28 /* User.swift in Sources */,
 				CA1A1E0D29B53478005B80D2 /* SavedLocation.swift in Sources */,
 				CA619E5A29A85FEE002EEF40 /* MapViewActionButton.swift in Sources */,
+				CA41115029C6AEBF000B62F1 /* TripAcceptedView.swift in Sources */,
 				CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */,
 				CA5FA85C29AD218E0007FC45 /* Color.swift in Sources */,
 				CAD72E8229B1BAB600EDFE28 /* SideMenuOptionView.swift in Sources */,
