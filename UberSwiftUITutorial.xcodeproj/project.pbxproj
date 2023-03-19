@@ -29,6 +29,7 @@
 		CA41114C29BD84F4000B62F1 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114B29BD84F4000B62F1 /* GeoPoint.swift */; };
 		CA41114E29C6AD72000B62F1 /* TripLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */; };
 		CA41115029C6AEBF000B62F1 /* TripAcceptedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */; };
+		CA41115229C6CA8F000B62F1 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41115129C6CA8F000B62F1 /* Spinner.swift */; };
 		CA56843929A5B9E000B819C2 /* UberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */; };
 		CA56843D29A5B9E200B819C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843C29A5B9E200B819C2 /* Assets.xcassets */; };
 		CA56844029A5B9E200B819C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA56843F29A5B9E200B819C2 /* Preview Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		CA41114B29BD84F4000B62F1 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
 		CA41114D29C6AD72000B62F1 /* TripLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLoadingView.swift; sourceTree = "<group>"; };
 		CA41114F29C6AEBF000B62F1 /* TripAcceptedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAcceptedView.swift; sourceTree = "<group>"; };
+		CA41115129C6CA8F000B62F1 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		CA56843529A5B9E000B819C2 /* UberSwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA56843829A5B9E000B819C2 /* UberSwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		CA56843C29A5B9E200B819C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				CAD72E8829B3228700EDFE28 /* SavedLocationRowView.swift */,
 				CAD72E8A29B324B600EDFE28 /* SettingsRowView.swift */,
 				CA1A1E0A29B45045005B80D2 /* LocationSearchResultsView.swift */,
+				CA41115129C6CA8F000B62F1 /* Spinner.swift */,
 			);
 			path = ReusableItems;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				CA3D97BA29AD7C8F009F4DD2 /* LoginView.swift in Sources */,
 				CA3D97BF29AD927F009F4DD2 /* CustomInputField.swift in Sources */,
 				CA5FA85629AC5F4E0007FC45 /* RideType.swift in Sources */,
+				CA41115229C6CA8F000B62F1 /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
